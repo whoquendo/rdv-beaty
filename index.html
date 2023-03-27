@@ -2,19 +2,19 @@
 <html lang="en">
 
 <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./styles.css">
-        <meta name="description" content="Empresa para el cuidado de su salud.
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <meta name="description" content="Empresa para el cuidado de su salud.
         Dirección de la empresa
         Página Web de la empresa">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-        <link rel="icon" type="image/x-icon" href="/icons/10_logo.PNG">
-        <title>TODO POR SU SALUD </title>
+    <link rel="icon" type="image/x-icon" href="/icons/10_logo.PNG">
+    <title>TODO POR SU SALUD </title>
 
     <style>
         :root {
@@ -155,6 +155,7 @@
         .section-card-services {
             background-color: #000;
             margin-top: 100px;
+            width: 100%;
         }
 
         .card {
@@ -197,11 +198,11 @@
         }
 
         .cards-services {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-       
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+
         }
 
         .cards-services img {
@@ -230,7 +231,7 @@
             width: 100px;
         }
 
-                /*servicios*/
+        /*servicios*/
 
         .container-servicios {
             display: grid;
@@ -275,6 +276,86 @@
             object-fit: cover;
         }
 
+        /*footer*/
+
+        .container-footer {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            background-color: #ACD9B2;
+        }
+
+        .footer-title {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: center;
+            height: 90px;
+            background-color: var(--white);
+            color: var(--hospital-green);
+            gap: 25px;
+        }
+
+        .footer-title img {
+            border-radius: 15px;
+        }
+
+
+        .footer-datos {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            justify-content: space-around;
+            align-items: center;
+            background-color: var(--dark);
+            color: var(--very-light-pink);
+        }
+
+        .footer-datos h4 {
+            text-align: center;
+        }
+
+        .footer-redes-sociales {
+            display: flex;
+            flex-direction: column;
+            background-color: var(--dark);
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+        }
+
+
+        .footer-redes-sociales img {
+            width: 35px;
+            margin-bottom: 20px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .whatsapp-contact {
+            position: fixed;
+            bottom: 0%;
+            right: 0%;
+            width: 100px;
+            z-index: 4;
+            padding: 0%;
+            border-radius: 50px;
+        }
+
+        .whatsapp-contact:hover {
+            text-decoration: none;
+            color: var(--hospital-green);
+            background-color: var(--hospital-green);
+            border-style: double;
+        }
+
+        .img-logo-footer {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 25px;
+        }
+
 
         @media (max-width: 640px) {
 
@@ -306,13 +387,14 @@
             }
 
             .cards-services {
-            margin-bottom: 50px;
-        }
-          /*servicios*/
-          
-        .cards-servicios {
-        flex-direction: column;
-    }
+                margin-bottom: 50px;
+            }
+
+            /*servicios*/
+
+            .cards-servicios {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -360,36 +442,42 @@
         </div>
     </section>
 
-     <!-- The services cards -->
+    <!-- The services cards -->
     <section class="section-card-services">
         <div class="container-cards-services">
             <div class="cards-services">
-                    <img class="image-service"
+                <img class="image-service"
                     src="https://images.pexels.com/photos/3212164/pexels-photo-3212164.jpeg?auto=compress&cs=tinysrgb&w=600"
                     alt="Masaje Facial">
-                    <h5>Full body massage</h5>
-                    <!-- <a href="https://calendly.com/agendadordecitas/eventosala1" class="button-book-services">Book Now</a> -->
-                    <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/agendadordecitas/eventosala1'});return false;" class="button-book-services">Book Now</a>
+                <h5>Full body massage</h5>
+                <!-- <a href="https://calendly.com/agendadordecitas/eventosala1" class="button-book-services">Book Now</a> -->
+                <a href=""
+                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/agendadordecitas/eventosala1'});return false;"
+                    class="button-book-services">Book Now</a>
             </div>
             <div class="cards-services">
                 <img class="image-service"
-                src="https://images.pexels.com/photos/3212164/pexels-photo-3212164.jpeg?auto=compress&cs=tinysrgb&w=600"
-                alt="Masaje Facial">
+                    src="https://images.pexels.com/photos/3212164/pexels-photo-3212164.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="Masaje Facial">
                 <h5>Back massage</h5>
                 <!-- <a href="https://calendly.com/agendadordecitas/eventosala2" class="button-book-services">Book Now</a> -->
-                <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/agendadordecitas/reunion-en-sala-2'});return false;" class="button-book-services">Book Now</a>
-        </div>
-        <div class="cards-services">
-            <img class="image-service"
-            src="https://images.pexels.com/photos/3212164/pexels-photo-3212164.jpeg?auto=compress&cs=tinysrgb&w=600"
-            alt="Masaje Facial">
-            <h5>Sport massage</h5>
-            <!-- <a href="https://calendly.com/agendadordecitas/eventosala3" class="button-book-services">Book Now</a> -->
-            <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/agendadordecitas/reunion-en-sala-3'});return false;" class="button-book-services">Book Now</a>
-    </div>
+                <a href=""
+                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/agendadordecitas/reunion-en-sala-2'});return false;"
+                    class="button-book-services">Book Now</a>
+            </div>
+            <div class="cards-services">
+                <img class="image-service"
+                    src="https://images.pexels.com/photos/3212164/pexels-photo-3212164.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="Masaje Facial">
+                <h5>Sport massage</h5>
+                <!-- <a href="https://calendly.com/agendadordecitas/eventosala3" class="button-book-services">Book Now</a> -->
+                <a href=""
+                    onclick="Calendly.initPopupWidget({url: 'https://calendly.com/agendadordecitas/reunion-en-sala-3'});return false;"
+                    class="button-book-services">Book Now</a>
+            </div>
     </section>
 
-     <!-- The services -->
+    <!-- The services -->
 
     <section class="container-servicios">
 
@@ -419,11 +507,46 @@
         </div>
     </section>
 
-        <!-- Principio del widget de enlace de Calendly -->
-    
-        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    
-        <!-- Final del widget de enlace de Calendly -->
+    <!-- The footer -->
+    <footer class="container-footer">
+        <div class="footer-title">
+            <img class="img-logo-footer"
+                src="https://media.istockphoto.com/id/1074752922/es/foto/fondo-de-flor-de-loto-dorado-ilustraci%C3%B3n-de-render-3d.jpg?b=1&s=612x612&w=0&k=20&c=PlRD8LRnDteDNanUqZkIDyHtI5Qwzl07fA9Otg3MN10="
+                alt="logo_footer">
+            <h1>BEAUTY</h1>
+        </div>
+
+        <div class="footer-datos">
+            <h4>Avenue Lorem, ipsum. <br>1950 Kraainem <br>
+                Bruxelles-Belgique</h4>
+            <h4>+32 0400 00 00 00</h4>
+            <h4>Lorem@gmail.com</h4>
+        </div>
+
+        <div class="footer-redes-sociales">
+            <div class="item-redes-sociales">
+                <a href=""><img src="./icons/icons8-facebook-nuevo-24.png" alt=""></a>
+                <a href=""></a><img src="./icons/icons8-instagram-32.png" alt=""></a>
+                <a href=""></a><img src="./icons/icons8-twitter-50.png" alt=""></a>
+            </div>
+            <div>
+                <h5>Bruxelles-Belgique 2023</h5>
+            </div>
+        </div>
+
+
+    </footer>
+    <!-- The whatsapp button -->
+    <a href="https://api.whatsapp.com/send?phone=32492071114&text=Bonjour Jardiniers Positifs, " target="_blank"><img
+            class="whatsapp-contact" src="./icons/whatsapp (1).png" alt="whatsapp"></a>
+    </div>
+
+
+    <!-- Principio del widget de enlace de Calendly -->
+
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+    <!-- Final del widget de enlace de Calendly -->
 
 </body>
 
