@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <title>Document</title>
+
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            width: 300px;
+            height: 200px;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+        }
+
+        .image-service {
+            width: 300px;
+            height: 200px;
+
+        }
+
+        .container-cards-services {
+            margin-top: 60px;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: var(--white);
+        }
+
+        .cards-services {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+       
+        }
+
+        .cards-services img {
+            border-radius: 5px;
+        }
+
+        .cards-services h5 {
+            font-size: var(--lg);
+            color: var(--very-light-pink);
+        }
+
+        .button-book-services {
+            background-color: var(--hospital-green);
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: var(--md);
+            cursor: pointer;
+            border-radius: 25px;
+        }
+
+
+        @media (max-width: 640px) {
+            .container-cards-services {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-cards-services">
+        <div class="cards-services">
+                <img class="image-service"
+                src="https://images.pexels.com/photos/3212164/pexels-photo-3212164.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="Masaje Facial">
+                <h5>Full body massage</h5>
+                <a href="https://calendly.com/agendadordecitas/eventosala1" class="button-book-services">Book Now</a>
+        </div>
+        <div class="cards-services">
+            <img class="image-service"
+            src="https://images.pexels.com/photos/3212164/pexels-photo-3212164.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="Masaje Facial">
+            <h5>Back massage</h5>
+            <a href="https://calendly.com/agendadordecitas/eventosala2" class="button-book-services">Book Now</a>
+    </div>
+    <div class="cards-services">
+        <img class="image-service"
+        src="https://images.pexels.com/photos/3212164/pexels-photo-3212164.jpeg?auto=compress&cs=tinysrgb&w=600"
+        alt="Masaje Facial">
+        <h5>Sport massage</h5>
+        <!-- <a href="https://calendly.com/agendadordecitas/eventosala3" class="button-book-services">Book Now</a> -->
+        <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/agendadordecitas/reunion-en-sala-2'});return false;" class="button-book-services">Book Now</a>
+</div>
+
+
+    <!-- Principio del widget de enlace de Calendly -->
+
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+<!-- Final del widget de enlace de Calendly -->
+
+
+        
+
+
+</body>
+
+</html>
