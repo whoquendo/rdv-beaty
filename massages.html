@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <meta name="description" content="Empresa para el cuidado de su salud.
+    Dirección de la empresa
+    Página Web de la empresa">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/icons/10_logo.PNG">
+    <title>Massages</title>
+</head>
+
+<style>
+    :root {
+        --white: #FFFFFF;
+        --black: #000000;
+        --very-light-pink: #C7C7C7;
+        --text-input-field: #F7F7F7;
+        --hospital-green: #ACD9B2;
+        --sm: 14px;
+        --md: 16px;
+        --lg: 18px;
+    }
+
+    body {
+        margin: 0;
+        font-family: 'Quicksand', sans-serif;
+        background-color: var(--very-light-pink);
+        opacity: 0.81;
+    }
+
+    .section-massages h1 {
+        justify-content: center;
+    }
+
+    .contenedor {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .contenedor img {
+        width: 100%;
+        height: 40vh;
+        object-fit: cover;
+        opacity: 0.51;
+    }
+
+
+    .text-massages {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .text-massages h1 {
+        margin-top: 50%;
+        color: var(--white);
+    }
+
+    hr {
+        height: 5px;
+        border-width: 0;
+        background-color: var(--hospital-green);
+        width: 50%;
+    }
+
+    .description-massages {
+        padding: 10px;
+    }
+
+    .description-massages li,
+    .description-massages p {
+        font-size: var(--md);
+        margin-left: 70px;
+    }
+
+    /*Navbar*/
+    nav {
+            background-color: #F7F7F7;
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            z-index: 2;
+
+        }
+
+        .logo {
+            width: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-left: 50px;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        .navbar-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-left ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-left ul {
+            margin-left: 12px;
+        }
+
+        .navbar-left ul li a {
+            text-decoration: none;
+            color: var(--very-light-pink);
+            border: 1px solid var(--white);
+            padding: 8px;
+            border-radius: 8px;
+        }
+
+        .navbar-left ul li a:hover {
+            border: 1px solid var(--hospital-green);
+            color: var(--hospital-green);
+        }
+
+                /*footer*/
+
+                .container-footer {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            background-color: #ACD9B2;
+        }
+
+        .footer-title {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: center;
+            height: 90px;
+            background-color: var(--white);
+            color: var(--hospital-green);
+            gap: 25px;
+        }
+
+        .footer-title img {
+            border-radius: 15px;
+        }
+
+
+        .footer-datos {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            justify-content: space-around;
+            align-items: center;
+            background-color: var(--dark);
+            color: var(--very-light-pink);
+        }
+
+        .footer-datos h4 {
+            text-align: center;
+            color: var(--white);
+        }
+
+        .footer-redes-sociales {
+            display: flex;
+            flex-direction: column;
+            background-color: var(--dark);
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+        }
+
+
+        .footer-redes-sociales img {
+            width: 35px;
+            margin-bottom: 20px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        h5 {
+            color: var(--text-input-field);
+        }
+
+        .whatsapp-contact {
+            position: fixed;
+            bottom: 0%;
+            right: 0%;
+            width: 100px;
+            z-index: 4;
+            padding: 0%;
+            border-radius: 50px;
+        }
+
+        .whatsapp-contact:hover {
+            text-decoration: none;
+            color: var(--hospital-green);
+            background-color: var(--hospital-green);
+            border-style: double;
+        }
+
+        .img-logo-footer {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 25px;
+        }
+
+        @media (max-width: 640px) {
+
+.menu {
+    display: block;
+    cursor: pointer;
+    width: 40px;
+    object-fit: cover;
+}
+
+.navbar-left {
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navbar-left ul {
+    display: none;
+}
+
+.navbar-email {
+    display: none;
+}
+
+
+
+/*footer*/
+
+.footer-datos {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+</style>
+</style>
+
+<body>
+
+    <nav>
+        <div class="navbar-left">
+            <img src="https://media.istockphoto.com/id/1074752922/es/foto/fondo-de-flor-de-loto-dorado-ilustraci%C3%B3n-de-render-3d.jpg?b=1&s=612x612&w=0&k=20&c=PlRD8LRnDteDNanUqZkIDyHtI5Qwzl07fA9Otg3MN10="
+                alt="logo" class="logo">
+            <img src="./icons/icon_menu.svg" alt="menu" class="menu">
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/">SKIN CLINIC</a>
+                </li>
+                <li>
+                    <a href="/">BEATY CLINIC</a>
+                </li>
+                <li>
+                    <a href="/">OTHERS</a>
+                </li>
+                <li>
+                    <a href="/">CONTACT</a>
+                </li>
+                <li>
+                    <a href="/">BOOK ONLINE</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section-massages">
+        <div class="contenedor">
+            <img
+                src="https://images.pexels.com/photos/3757952/pexels-photo-3757952.jpeg?auto=compress&cs=tinysrgb&w=600" />
+            <div class="text-massages">
+                <h1>MASSAGES</h1>
+            </div>
+        </div>
+        <hr>
+        <div class="description-massages">
+            <p>
+                It is the oldest therapeutic tool used by humans to provide a natural remedy against pain.
+                Massage is a form of manipulation of the superficial and deep layers of the body's muscles using various
+                techniques to improve their functions, aid in healing processes and to relax pain.
+
+                There are no contraindications for massages, except for specific conditions that may prevent certain
+                maneuvers, such as skin problems, etc.
+
+            </p>
+
+            <ul><h4>Some benefits to take into account when receiving a massage, are:</h4></ul>
+            <li>Pain relief.</li>
+            <li>Feeling of general well-being./li>
+            <li>Relaxation of contracted muscles.</li>
+            <li>Long-term flexibility of tissues.</li>
+            <li>Improvement of blood and lymphatic circulation.</li>
+
+            <ul>
+                <h2>TYPES OF MASSAGE</h2>
+            </ul>
+            <li>Kobido: Japanese facial massage, natural flirting effect without surgery.</li>
+            <li>Decontracting: intense massage to relax muscles and relieve headaches, back, shoulders, arms and feet.
+            </li>
+            <li>Relaxing: Medium pressure massage to relax your mind and pamper you.</li>
+            <li>Traditional Thai: massage clothed and on a futon on the floor. Stretching and acupressure.</li>
+        </div>
+    </section>
+
+        <!-- The footer -->
+        <hr class="hr-footer">
+        <footer class="container-footer">
+            <div class="footer-title">
+                <img class="img-logo-footer"
+                    src="https://media.istockphoto.com/id/1074752922/es/foto/fondo-de-flor-de-loto-dorado-ilustraci%C3%B3n-de-render-3d.jpg?b=1&s=612x612&w=0&k=20&c=PlRD8LRnDteDNanUqZkIDyHtI5Qwzl07fA9Otg3MN10="
+                    alt="logo_footer">
+                <h1>BEAUTY</h1>
+            </div>
+    
+            <div class="footer-datos">
+                <h4>Avenue Lorem, ipsum. <br>1950 Kraainem <br>
+                    Bruxelles-Belgique</h4>
+                <h4>+32 0400 00 00 00</h4>
+                <h4>Lorem@gmail.com</h4>
+            </div>
+    
+            <div class="footer-redes-sociales">
+                <div class="item-redes-sociales">
+                    <a href=""><img src="./icons/icons8-facebook-nuevo-24.png" alt=""></a>
+                    <a href=""></a><img src="./icons/icons8-instagram-32.png" alt=""></a>
+                    <a href=""></a><img src="./icons/icons8-twitter-50.png" alt=""></a>
+                </div>
+                <div>
+                    <h5>Bruxelles-Belgique 2023</h5>
+                </div>
+            </div>
+    
+    
+        </footer>
+        <!-- The whatsapp button -->
+        <a href="https://api.whatsapp.com/send?phone=32483053758&text=Bonjour Soins Conscient, " target="_blank"><img
+                class="whatsapp-contact" src="./icons/whatsapp (1).png" alt="whatsapp"></a>
+
+
+
+</body>
+
+</html>

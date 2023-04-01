@@ -43,16 +43,17 @@
         .container-cards-services {
             margin-top: 60px;
             display: flex;
+flex-wrap: wrap;
             justify-content: space-evenly;
             background-color: var(--white);
         }
 
         .cards-services {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-       
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+
         }
 
         .cards-services img {
@@ -89,39 +90,50 @@
 
     <div class="container-cards-services">
         <div class="cards-services">
-                <img class="image-service"
+            <img class="image-service"
                 src="https://images.pexels.com/photos/3212164/pexels-photo-3212164.jpeg?auto=compress&cs=tinysrgb&w=600"
                 alt="Masaje Facial">
-                <h5>Full body massage</h5>
-                <!-- <a href="https://calendly.com/agendadordecitas/eventosala1" class="button-book-services">Book Now</a> -->
-                <!-- <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/agendadordecitas/eventosala1'});return false;" class="button-book-services">Book Now</a> -->
-                <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/soinsconscient/fullbodymassage'});return false;" class="button-book-services">Book Now</a>
+            <h5>Full body massage</h5>
+            <!-- <a href="https://calendly.com/agendadordecitas/eventosala1" class="button-book-services">Book Now</a> -->
+            <!-- <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/agendadordecitas/eventosala1'});return false;" class="button-book-services">Book Now</a> -->
+            <a href=""
+                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/soinsconscient/fullbodymassage'});return false;"
+                class="button-book-services">Book Now</a>
         </div>
         <div class="cards-services">
             <img class="image-service"
-            src="https://images.pexels.com/photos/3212164/pexels-photo-3212164.jpeg?auto=compress&cs=tinysrgb&w=600"
-            alt="Masaje Facial">
+                src="https://images.pexels.com/photos/3212164/pexels-photo-3212164.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="Masaje Facial">
             <h5>Back massage</h5>
             <!-- <a href="https://calendly.com/agendadordecitas/eventosala2" class="button-book-services">Book Now</a> -->
             <!-- <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/agendadordecitas/reunion-en-sala-2'});return false;" class="button-book-services">Book Now</a> -->
-            <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/soinsconscient/backmassage'});return false;" class="button-book-services">Book Now</a>
-    </div>
-    <div class="cards-services">
-        <img class="image-service"
-        src="https://images.pexels.com/photos/3212164/pexels-photo-3212164.jpeg?auto=compress&cs=tinysrgb&w=600"
-        alt="Masaje Facial">
-        <h5>Sport massage</h5>
-        <!-- <a href="https://calendly.com/agendadordecitas/eventosala3" class="button-book-services">Book Now</a> -->
-        <!-- <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/agendadordecitas/reunion-en-sala-3'});return false;" class="button-book-services">Book Now</a> -->
-        <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/soinsconscient/sportmassage'});return false;" class="button-book-services">Book Now</a>
-</div>
+            <a href=""
+                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/soinsconscient/backmassage'});return false;"
+                class="button-book-services">Book Now</a>
+        </div>
+        <div class="cards-services">
+            <img class="image-service"
+                src="https://images.pexels.com/photos/3212164/pexels-photo-3212164.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="Masaje Facial">
+            <h5>Sport massage</h5>
+            <!-- <a href="https://calendly.com/agendadordecitas/eventosala3" class="button-book-services">Book Now</a> -->
+            <!-- <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/agendadordecitas/reunion-en-sala-3'});return false;" class="button-book-services">Book Now</a> -->
+            <a href=""
+                onclick="Calendly.initPopupWidget({url: 'https://calendly.com/soinsconscient/sportmassage'});return false;"
+                class="button-book-services">Book Now</a>
+        </div>
 
+
+
+
+
+    </div>
 
     <!-- Principio del widget de enlace de Calendly -->
 
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 
-<!-- Final del widget de enlace de Calendly -->
+    <!-- Final del widget de enlace de Calendly -->
 
 
 </body>
