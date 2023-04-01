@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
     <meta name="description" content="Empresa para el cuidado de su salud.
         Dirección de la empresa
         Página Web de la empresa">
@@ -13,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="./styles.css"> -->
     <link rel="icon" type="image/x-icon" href="/icons/10_logo.PNG">
     <title>TODO POR SU SALUD </title>
 
@@ -64,6 +64,14 @@
             display: none;
         }
 
+        nav {
+            background-color: #F7F7F7;
+            position: fixed;
+            top: 10px;
+            width: 100%;
+            z-index: 4;
+        }
+
         .navbar-left {
             display: flex;
             align-items: center;
@@ -93,6 +101,27 @@
             border: 1px solid var(--hospital-green);
             color: var(--hospital-green);
         }
+
+        /*Menu para mobil*/
+
+    .innactive {
+        display: none;
+    }
+
+    .menu-mobil {
+        margin-top: 100px;
+        width: 100%;
+   
+    }
+
+    .menu-mobil a,
+    .menu-mobil li {
+        list-style: none;
+        text-decoration: none;
+        color: var(--very-light-pink);
+        padding: 8px;
+        border-radius: 8px;
+    }
 
         .img-fondo-carrousel {
             position: absolute;
@@ -373,7 +402,6 @@
             }
 
             .navbar-left {
-
                 display: flex;
                 justify-content: space-evenly;
                 align-items: center;
@@ -413,6 +441,15 @@
                 flex-direction: column;
             }
         }
+
+            /* Screen bigger 641px*/
+    @media (min-width:641px) {
+
+.menu-mobil{
+display: none;
+}
+
+};
     </style>
 </head>
 
@@ -429,7 +466,7 @@
                         <a href="/">Home</a>
                     </li>
                     <li>
-                        <a href="/">SKIN CLINIC</a>
+                        <a href="./massages.html">MASSAGES</a>
                     </li>
                     <li>
                         <a href="/">BEATY CLINIC</a>
@@ -445,6 +482,30 @@
                     </li>
                 </ul>
             </div>
+
+               <!-- para el menu en mobil -->
+        <div class="menu-mobil innactive">
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="./massages.html">MASSAGES</a>
+                </li>
+                <li>
+                    <a href="/">BEATY CLINIC</a>
+                </li>
+                <li>
+                    <a href="/">OTHERS</a>
+                </li>
+                <li>
+                    <a href="/">CONTACT</a>
+                </li>
+                <li>
+                    <a href="/">BOOK ONLINE</a>
+                </li>
+            </ul>
+        </div>
         </nav>
         <div class="pantalla-carrousel"></div>
         <img class="img-fondo-carrousel"
@@ -519,7 +580,7 @@
             <div class="servicios-info">
                 <h2>MASSAGES</h2>
                 <P>It is the oldest therapeutic tool used by humans to provide a natural remedy against pain...</P>
-                <a href="./massages.html" class="button-masinfo-beaty-clinic">EN SAVOIR PLUS</a>
+                <a href="./massages.html" class="button-masinfo-beaty-clinic">Find out more</a>
             </div>
         </div>
 
@@ -531,7 +592,7 @@
             <div class="servicios-info">
                 <h2>BODY EXFOLIATION</h2>
                 <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi iste impedit quas ipsa earum.</P>
-                <a href="#" class="button-masinfo-beaty-clinic">EN SAVOIR PLUS</a>
+                <a href="#" class="button-masinfo-beaty-clinic">Find out more</a>
             </div>
         </div>
         </div>
@@ -576,6 +637,7 @@
 
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 
+    <script src="./index.js"></script>
     <!-- Final del widget de enlace de Calendly -->
 
 </body>

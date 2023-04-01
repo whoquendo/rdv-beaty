@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
     <meta name="description" content="Empresa para el cuidado de su salud.
     Dirección de la empresa
     Página Web de la empresa">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="./styles.css"> -->
     <link rel="icon" type="image/x-icon" href="/icons/10_logo.PNG">
     <title>Massages</title>
 </head>
@@ -31,7 +31,7 @@
     body {
         margin: 0;
         font-family: 'Quicksand', sans-serif;
-        background-color: var(--very-light-pink);
+        background-color: var(--white);
         opacity: 0.81;
     }
 
@@ -85,8 +85,28 @@
 
     /*Navbar*/
     nav {
+        background-color: #F7F7F7;
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        z-index: 2;
+
+    }
+
+    .logo {
+        width: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-left: 50px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    nav {
             background-color: #F7F7F7;
-            position: absolute;
+            position: fixed;
             top: 0px;
             width: 100%;
             z-index: 2;
@@ -134,140 +154,209 @@
             color: var(--hospital-green);
         }
 
-                /*footer*/
-
-                .container-footer {
-            display: flex;
-            flex-direction: column;
+        .img-fondo-carrousel {
+            position: absolute;
+            top: 60px;
+            left: 0;
             width: 100%;
-            justify-content: center;
-            background-color: #ACD9B2;
+            height: 70vh;
+            overflow: hidden;
         }
 
-        .footer-title {
+
+    /*Menu para mobil*/
+
+    .innactive {
+        display: none;
+    }
+
+    .menu-mobil {
+        margin-top: 100px;
+        width: 100%;
+   
+    }
+
+    .menu-mobil a,
+    .menu-mobil li {
+        list-style: none;
+        text-decoration: none;
+        color: var(--very-light-pink);
+        padding: 8px;
+        border-radius: 8px;
+    }
+
+    /*footer*/
+
+    .container-footer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        background-color: #ACD9B2;
+    }
+
+    .footer-title {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        height: 90px;
+        background-color: var(--white);
+        color: var(--hospital-green);
+        gap: 25px;
+    }
+
+    .footer-title img {
+        border-radius: 15px;
+    }
+
+
+    .footer-datos {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: space-around;
+        align-items: center;
+        background-color: var(--dark);
+        color: var(--very-light-pink);
+    }
+
+    .footer-datos h4 {
+        text-align: center;
+        color: var(--white);
+    }
+
+    .footer-redes-sociales {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--dark);
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+    }
+
+
+    .footer-redes-sociales img {
+        width: 35px;
+        margin-bottom: 20px;
+        object-fit: cover;
+        cursor: pointer;
+    }
+
+    h5 {
+        color: var(--text-input-field);
+    }
+
+    .whatsapp-contact {
+        position: fixed;
+        bottom: 0%;
+        right: 0%;
+        width: 100px;
+        z-index: 4;
+        padding: 0%;
+        border-radius: 50px;
+    }
+
+    .whatsapp-contact:hover {
+        text-decoration: none;
+        color: var(--hospital-green);
+        background-color: var(--hospital-green);
+        border-style: double;
+    }
+
+    .img-logo-footer {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 25px;
+    }
+
+    /*responsive*/
+
+    @media (max-width: 640px) {
+
+        .menu {
+            display: block;
+            cursor: pointer;
+            width: 40px;
+            object-fit: cover;
+        }
+
+
+        .navbar-left {
             display: flex;
+            justify-content: space-evenly;
             align-items: center;
-            width: 100%;
-            justify-content: center;
-            height: 90px;
-            background-color: var(--white);
-            color: var(--hospital-green);
-            gap: 25px;
         }
 
-        .footer-title img {
-            border-radius: 15px;
+        .navbar-left ul {
+            display: none;
         }
 
+        .navbar-email {
+            display: none;
+        }
+
+
+
+        /*footer*/
 
         .footer-datos {
-            display: grid;
-            grid-template-columns: auto auto auto;
-            justify-content: space-around;
-            align-items: center;
-            background-color: var(--dark);
-            color: var(--very-light-pink);
-        }
-
-        .footer-datos h4 {
-            text-align: center;
-            color: var(--white);
-        }
-
-        .footer-redes-sociales {
-            display: flex;
-            flex-direction: column;
-            background-color: var(--dark);
-            justify-content: center;
-            align-items: center;
-            gap: 25px;
-        }
-
-
-        .footer-redes-sociales img {
-            width: 35px;
-            margin-bottom: 20px;
-            object-fit: cover;
-            cursor: pointer;
-        }
-
-        h5 {
-            color: var(--text-input-field);
-        }
-
-        .whatsapp-contact {
-            position: fixed;
-            bottom: 0%;
-            right: 0%;
-            width: 100px;
-            z-index: 4;
-            padding: 0%;
-            border-radius: 50px;
-        }
-
-        .whatsapp-contact:hover {
-            text-decoration: none;
-            color: var(--hospital-green);
-            background-color: var(--hospital-green);
-            border-style: double;
-        }
-
-        .img-logo-footer {
-            width: 50px;
-            height: 50px;
-            object-fit: cover;
-            border-radius: 25px;
-        }
-
-        @media (max-width: 640px) {
-
-.menu {
-    display: block;
-    cursor: pointer;
-    width: 40px;
-    object-fit: cover;
-}
-
-.navbar-left {
-
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.navbar-left ul {
-    display: none;
-}
-
-.navbar-email {
-    display: none;
-}
-
-
-
-/*footer*/
-
-.footer-datos {
             display: flex;
             flex-direction: column;
         }
     }
+
+    /* Screen bigger 641px*/
+    @media (min-width:641px) {
+
+.menu-mobil{
+display: none;
+}
+
+};
 </style>
 </style>
 
 <body>
 
     <nav>
-        <div class="navbar-left">
-            <img src="https://media.istockphoto.com/id/1074752922/es/foto/fondo-de-flor-de-loto-dorado-ilustraci%C3%B3n-de-render-3d.jpg?b=1&s=612x612&w=0&k=20&c=PlRD8LRnDteDNanUqZkIDyHtI5Qwzl07fA9Otg3MN10="
-                alt="logo" class="logo">
-            <img src="./icons/icon_menu.svg" alt="menu" class="menu">
+        <nav>
+            <div class="navbar-left">
+                <img src="https://media.istockphoto.com/id/1074752922/es/foto/fondo-de-flor-de-loto-dorado-ilustraci%C3%B3n-de-render-3d.jpg?b=1&s=612x612&w=0&k=20&c=PlRD8LRnDteDNanUqZkIDyHtI5Qwzl07fA9Otg3MN10="
+                    alt="logo" class="logo">
+                <img src="./icons/icon_menu.svg" alt="menu" class="menu">
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="./massages.html">MASSAGES</a>
+                    </li>
+                    <li>
+                        <a href="/">BEATY CLINIC</a>
+                    </li>
+                    <li>
+                        <a href="/">OTHERS</a>
+                    </li>
+                    <li>
+                        <a href="/">CONTACT</a>
+                    </li>
+                    <li>
+                        <a href="/">BOOK ONLINE</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+            
+
+        <!-- para el menu en mobil -->
+        <div class="menu-mobil innactive">
             <ul>
                 <li>
                     <a href="/">Home</a>
                 </li>
                 <li>
-                    <a href="/">SKIN CLINIC</a>
+                    <a href="./massages.html">MASSAGES</a>
                 </li>
                 <li>
                     <a href="/">BEATY CLINIC</a>
@@ -305,7 +394,9 @@
 
             </p>
 
-            <ul><h4>Some benefits to take into account when receiving a massage, are:</h4></ul>
+            <ul>
+                <h4>Some benefits to take into account when receiving a massage, are:</h4>
+            </ul>
             <li>Pain relief.</li>
             <li>Feeling of general well-being./li>
             <li>Relaxation of contracted muscles.</li>
@@ -323,42 +414,43 @@
         </div>
     </section>
 
-        <!-- The footer -->
-        <hr class="hr-footer">
-        <footer class="container-footer">
-            <div class="footer-title">
-                <img class="img-logo-footer"
-                    src="https://media.istockphoto.com/id/1074752922/es/foto/fondo-de-flor-de-loto-dorado-ilustraci%C3%B3n-de-render-3d.jpg?b=1&s=612x612&w=0&k=20&c=PlRD8LRnDteDNanUqZkIDyHtI5Qwzl07fA9Otg3MN10="
-                    alt="logo_footer">
-                <h1>BEAUTY</h1>
-            </div>
-    
-            <div class="footer-datos">
-                <h4>Avenue Lorem, ipsum. <br>1950 Kraainem <br>
-                    Bruxelles-Belgique</h4>
-                <h4>+32 0400 00 00 00</h4>
-                <h4>Lorem@gmail.com</h4>
-            </div>
-    
-            <div class="footer-redes-sociales">
-                <div class="item-redes-sociales">
-                    <a href=""><img src="./icons/icons8-facebook-nuevo-24.png" alt=""></a>
-                    <a href=""></a><img src="./icons/icons8-instagram-32.png" alt=""></a>
-                    <a href=""></a><img src="./icons/icons8-twitter-50.png" alt=""></a>
-                </div>
-                <div>
-                    <h5>Bruxelles-Belgique 2023</h5>
-                </div>
-            </div>
-    
-    
-        </footer>
-        <!-- The whatsapp button -->
-        <a href="https://api.whatsapp.com/send?phone=32483053758&text=Bonjour Soins Conscient, " target="_blank"><img
-                class="whatsapp-contact" src="./icons/whatsapp (1).png" alt="whatsapp"></a>
+    <!-- The footer -->
+    <hr class="hr-footer">
+    <footer class="container-footer">
+        <div class="footer-title">
+            <img class="img-logo-footer"
+                src="https://media.istockphoto.com/id/1074752922/es/foto/fondo-de-flor-de-loto-dorado-ilustraci%C3%B3n-de-render-3d.jpg?b=1&s=612x612&w=0&k=20&c=PlRD8LRnDteDNanUqZkIDyHtI5Qwzl07fA9Otg3MN10="
+                alt="logo_footer">
+            <h1>BEAUTY</h1>
+        </div>
 
+        <div class="footer-datos">
+            <h4>Avenue Lorem, ipsum. <br>1950 Kraainem <br>
+                Bruxelles-Belgique</h4>
+            <h4>+32 0400 00 00 00</h4>
+            <h4>Lorem@gmail.com</h4>
+        </div>
+
+        <div class="footer-redes-sociales">
+            <div class="item-redes-sociales">
+                <a href=""><img src="./icons/icons8-facebook-nuevo-24.png" alt=""></a>
+                <a href=""></a><img src="./icons/icons8-instagram-32.png" alt=""></a>
+                <a href=""></a><img src="./icons/icons8-twitter-50.png" alt=""></a>
+            </div>
+            <div>
+                <h5>Bruxelles-Belgique 2023</h5>
+            </div>
+        </div>
+
+
+    </footer>
+    <!-- The whatsapp button -->
+    <a href="https://api.whatsapp.com/send?phone=32483053758&text=Bonjour Soins Conscient, " target="_blank"><img
+            class="whatsapp-contact" src="./icons/whatsapp (1).png" alt="whatsapp"></a>
 
 
 </body>
+
+<script src="./index.js"></script>
 
 </html>
